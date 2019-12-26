@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="aqua">
+    <br>
+    <br>
+    <h1><center><font style="font-size: 42px">工业APP分级审核系统</font></center></h1>
+    <br>
+
+    <h2><center><font style="font-size: 28px">待审核列表</font></center></h2>
+    <table border="1" width="1000">
+        <thead>
+        <tr>
+            <td>软件ID</td>
+            <td>软件名称</td>
+            <td>提交时间</td>
+            <td>安全等级</td>
+            <td>适用范围分类</td>
+            <td>业务环节分类</td>
+            <td>知识类型分类</td>
+            <td>最终分级</td>
+            <td>编辑</td>
+        </tr>
+        </thead>
+
+        <tr th:each="item : ${listPre}">
+
+        <td th:text="${item.id}"></td>
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.date}"></td>
+        <td th:text="${item.security_level}"></td>
+        <td th:text="${item.class_1}"></td>
+        <td th:text="${item.class_2}"></td>
+        <td th:text="${item.class_3}"></td>
+        <td th:text="${item.grade}"></td>
+        <td><a th:href="@{/checkApp(id=${item.id})}">审核</a> </td>
+        </tr>
+
+    </table>
+
+
+</body>
+</html>

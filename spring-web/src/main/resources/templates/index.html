@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+</head>
+<body bgcolor="aqua">
+
+<!--/*@thymesVar id="name" type=""*/-->
+
+<h7 th:text="${name}"/>
+
+<form action="submit" method="post" οnsubmit="return beforeSubmit()">
+    <br>
+    <br>
+    <h1><center><font style="font-size: 42px">工业APP分级审核系统</font></center></h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+        <label>用户名 </label>
+        <input id="username" type="text" name="username" />
+    </center>
+    <br>
+    <center>
+    <label>密&#12288;码</label>
+    <input id="password" type="password" name="password" />
+    </center>
+    <br>
+    <center><input type="submit" value="登录" /></center>
+
+</form>
+
+
+</body>
+</html>
